@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+  mysql:
+    build: .
+    container_name: app_drop
+    environment:
+      HOST: 127.0.0.1
+      USERNAME: root
+      PASSWORD: 123456 
+    volumes:
+      - ./volumes/config:/app/config
+      - ./volumes/error:/app/error
+    network_mode: host
+    
